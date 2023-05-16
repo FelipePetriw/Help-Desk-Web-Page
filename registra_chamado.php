@@ -11,7 +11,7 @@
     $texto = $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
 
     //Abrindo o arquivo
-    $arquivo = fopen('arquivo.txt', 'a');
+    $arquivo = fopen('arquivo.hd', 'a');
 
     //Escrevendo o texto
     fwrite($arquivo, $texto);
