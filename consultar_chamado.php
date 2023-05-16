@@ -1,5 +1,25 @@
 <?php require_once "validador_acesso.php" ?>
 
+<?php
+
+  //Chamados
+  $chamados = array();
+
+  //Abrir o arquivo.hd
+  $arquivo = fopen('arquivo.hd', 'r');
+
+  //Enquanto houver registros (linhas) a serem recuperados
+  while(!feof($arquivo)) { //feof testa pelo fim de um arquivo
+    //Leitura e recuperação dos dados cadastrados em cada linha do arquivo
+    $registro = fgets($arquivo);
+    $chamados[] = $registro;
+  }
+
+  //Fechando o arquivo aberto
+  fclose($arquivo);
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -40,6 +60,14 @@
             </div>
             
             <div class="card-body">
+
+            <? foreach($chamados as $chamado) { ?>
+              
+              <?php 
+              
+                $chamado_dados = explode('#', $chamado);
+              
+              ?>
               
               <div class="card mb-3 bg-light">
                 <div class="card-body">
@@ -50,14 +78,7 @@
                 </div>
               </div>
 
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
-                </div>
-              </div>
+              <? } ?>
 
               <div class="row mt-5">
                 <div class="col-6">
