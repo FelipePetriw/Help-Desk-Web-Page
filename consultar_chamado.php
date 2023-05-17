@@ -9,10 +9,28 @@
   $arquivo = fopen('arquivo.hd', 'r');
 
   //Enquanto houver registros (linhas) a serem recuperados
-  while(!feof($arquivo)) { //feof testa pelo fim de um arquivo
-    //Leitura e recuperação dos dados cadastrados em cada linha do arquivo
+  while(!feof($arquivo)) { //testa pelo fim de um arquivo
+    //linhas  
     $registro = fgets($arquivo);
-    $chamados[] = $registro;
+
+    //explode dos detalhes do registro para verificar o id do usuário responsável pelo cadastro
+    $registro_detalhes = explode('#', $registro);
+
+    //(perfil id = 2) só vamos exibir o chamado, se ele foi criado pelo usuário
+    if($_SESSION['perfil_id'] == 2) {
+
+      //se usuário autenticado não for o usuário de abertura do chamado então não faz nada
+      if($_SESSION['id'] != $registro_detalhes[0]) {
+        continue; //não faz nada
+
+      } else {
+        $chamados[] = $registro; //adiciona o registro do arquivo ao array $chamados
+      }
+
+    } else {
+      $chamados[] = $registro; //adiciona o registro do arquivo ao array $chamados
+    }
+
   }
 
   //Fechando o arquivo aberto
@@ -75,7 +93,7 @@
                   }
                 }
 
-                if(count($chamado_dados) <3){
+                if(count($chamado_dados) < 3){
                   continue;
                 }
               
