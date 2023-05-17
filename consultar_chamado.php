@@ -67,6 +67,14 @@
               
                 $chamado_dados = explode('#', $chamado);
 
+                //Identifica qual perfil está acessando a pagina
+                if($_SESSION['perfil_id'] == 2) {
+                  //Exibe o chamado se for criado pelo usuário 2
+                  if($_SESSION['id'] != $chamado_dados[0]) {
+                    continue;
+                  }
+                }
+
                 if(count($chamado_dados) <3){
                   continue;
                 }
