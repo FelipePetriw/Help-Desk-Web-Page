@@ -4,11 +4,14 @@
 
     //Variavel que verifica se a autenticação foi realizada
     $usuario_autenticado = false;
+    $usuario_id = null;
 
-    //Ususários do sistema
+    //Usuários do sistema
     $usuarios_app = array(
-        array('email' => 'adm@teste.com.br', 'senha' => '123456'),
-        array('email' => 'user@teste.com.br', 'senha' => 'abcd'),
+        array('id' => 1, 'email' => 'adm@teste.com.br', 'senha' => '123456'),
+        array('id' => 2, 'email' => 'user@teste.com.br', 'senha' => '123456'),
+        array('id' => 3, 'email' => 'jose@teste.com.br', 'senha' => '123456'),
+        array('id' => 4, 'email' => 'maria@teste.com.br', 'senha' => '123456'),
     );
 
     foreach($usuarios_app as $user) {
