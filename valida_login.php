@@ -18,12 +18,14 @@
         
         if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
             $usuario_autenticado = true;
+            $usuario_id = $user['id'];
         }
     }
 
     if($usuario_autenticado) {
         echo 'Autenticado com sucesso!';
         $_SESSION['autenticado'] = 'SIM';
+        $_SESSION['id'] = $usuario_id;
         header('Location: home.php');
     } else {
         $_SESSION['autenticado'] = 'NAO';
