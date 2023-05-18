@@ -3,7 +3,7 @@
 ## 💻 Sobre o Projeto
 Desenvolvimento de um programa em página web para abertura de chamados de Help Desk, para acessa-lo o usuários precisa ter o login cadastrados.
 
-O programa conta também com a segurança de controle de perfis para 
+O programa conta também com a segurança de controle de perfis, fazendo com que os usuários só possam ver os chamados que foram aberto por eles, exceto os usuários administradores que consegue visualizar todos os chamados abertos.
 
 
 ## 🎨 Layout
