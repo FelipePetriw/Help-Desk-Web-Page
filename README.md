@@ -1,2 +1,27 @@
 # Help-Desk-Web-Page
- Desenvolvimento de uma página web para abertura de chamados de Help Desk.
+ 
+## 💻 Sobre o Projeto
+Desenvolvimento de um programa em página web para abertura de chamados de Help Desk, para acessa-lo o usuários precisa ter o login cadastrados.
+
+O programa conta também com a segurança de controle de perfis para 
+
+
+## 🎨 Layout
+
+![image](https://github.com/FelipePetriw/Help-Desk-Web-Page/blob/main/img/Tela01.JPG)
+![image](https://github.com/FelipePetriw/Help-Desk-Web-Page/blob/main/img/Tela02.JPG)
+![image](https://github.com/FelipePetriw/Help-Desk-Web-Page/blob/main/img/Tela03.JPG)
+![image](https://github.com/FelipePetriw/Help-Desk-Web-Page/blob/main/img/Tela04.JPG)
+
+## 🛠 Tecnologias
+
+Foram utilizadas as seguintes ferramentas para o desenvolvimento do projeto:
+
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML5"/></code>
+
+
+## 📝 Licença
+
+Este projeto esta sob a licença MIT.
+
+Feito por Felipe Petriw - [Entre em contato!](https://www.linkedin.com/in/felipepetriw/)
